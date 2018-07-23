@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+      <title>LOLOTUBE</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+      <header class="masthead d-flex">
+            <div class="logo">
+                  <h2>YOUTUBE
+                        <br>API</h2>
+                  <!-- <img class="lolotube-logo" src="images/lolotube-logo-5.png" alt=""> -->
+            </div>
+
+            <div class="site-container">
+                  <form id="search-form" action="#">
+                        <input id="search-keyword" type="text" name="search-keyword" placeholder="search for videos" required>
+                        <input id="submit-btn" type="submit" value="Search">
+                        <div class="d-flex search-result-container">
+                              <input class="date" id="search-date-after" type="text" placeholder=" Select start date">
+                              <input class="date" id="search-date-before" type="text" placeholder=" Select end date">
+                              <div id="dropdown" class="dropdown">
+                                    <button id="dropbtn" class="dropbtn"> results : </button>
+                                    <div class="dropdown-content" id="dropdown-content">
+
+                                    </div>
+                              </div>
+                        </div>
+                  </form>
+
+            </div>
+      </header>
+
+      <div class="site-parent">
+            <iframe id="iFrame" name="iframe_a" src="https://www.youtube.com/embed/" frameborder="0" height="400" allowfullscreen="allowfullscreen"></iframe>
+            <div id="site">
+
+            </div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script src="scripts/app.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=start"></script>
+</body>
+
+</html>

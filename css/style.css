@@ -1,0 +1,296 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #fafbfc;
+  font-family: OpenSans, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.site-container {
+  margin-left: 7%;
+  max-width: 1200px;
+  width: 80%;
+}
+
+.masthead {
+  background: #2e3d49;
+  padding: 2em 0;
+}
+
+.logo {
+  position: relative;
+  width: 18%;
+}
+
+.logo h2 {
+  color: #f70000;
+  font-weight: bold;
+  padding-top: 5%;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/*** Search Form ***/
+#search-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  padding: 1em 0 0 0;
+}
+
+#search-keyword {
+  border: none;
+  flex-grow: 0.78;
+  padding: 0.25em 2em;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#submit-btn {
+  background-color: #f70000;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.6em 2em;
+  text-transform: uppercase;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-result-container {
+  width: 85%;
+  margin: 1em auto 0;
+}
+
+#search-date-after {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: none;
+}
+#search-date-before {
+  border: none;
+}
+.dropbtn {
+  background-color: #f70000;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.dropdown {
+  position: relative;
+  width: 25%;
+}
+
+.dropdown-content {
+  width: 300%;
+  height: 600px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow: scroll;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  z-index: 11;
+}
+
+.dropdown-content a:hover {
+  background-color: #dfdfdf;
+}
+
+/*** Response Container ***/
+#site {
+  width: 35%;
+  height: 80vh;
+  border-left: 2px solid #ccc;
+  overflow: scroll;
+}
+
+.player {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.player .card-body {
+  padding: 1rem;
+}
+
+.player .img-a {
+  margin: auto 0 auto 20px;
+}
+
+.player .img-a img {
+  width: 180px;
+}
+
+.player h5 {
+  font-size: 1em;
+}
+
+.player p {
+  width: 80%;
+  font-size: 0.8em;
+  height: 62px;
+  overflow: hidden;
+}
+
+.description {
+  width: 90%;
+  display: none;
+  position: absolute;
+  bottom: 100px;
+  left: -20%;
+  padding: 10px;
+  font-size: 0.7em;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.description-span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  background: #fefefe;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  transform: rotate(45deg);
+}
+
+.search-result {
+  color: #f70000;
+  font-weight: bold;
+}
+
+.site-parent {
+  display: flex;
+}
+
+#iFrame {
+  width: 60%;
+  margin: 100px;
+  border: 2px solid #000;
+}
+
+@media screen and (max-width: 1300px) {
+  .logo {
+    width: 25%;
+  }
+  .search-result-container {
+    margin: 1em 1em 0;
+  }
+  .dropbtn {
+    font-size: 0.8em;
+    padding: 6px 0;
+  }
+  #iFrame {
+    margin: 75px;
+  }
+  #site {
+    width: 42%;
+  }
+  .card-body {
+    padding: 1rem 1rem 0.5rem !important;
+    font-size: 0.9em;
+  }
+  .player .img-a img {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .logo h2 {
+    font-size: 1.5em;
+  }
+  #search-form {
+    width: 100%;
+  }
+
+  .search-result-container {
+    display: none !important;
+  }
+  .site-parent {
+    display: block;
+  }
+  #site {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid #ccc;
+  }
+  #iFrame {
+    width: 75%;
+    margin: 75px 75px 50px 75px;
+  }
+  .player {
+    width: 50%;
+    border-left: 1px solid #ccc;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo h2 {
+    font-size: 1.3em;
+    padding-top: 10%;
+  }
+  #search-keyword {
+    padding: 0.3em 2em;
+    flex-grow: 0;
+    width: 60%;
+  }
+  #submit-btn {
+    padding: 0.3em 2em;
+    font-size: 0.7em;
+  }
+  .player {
+    width: 100%;
+    border-left: none;
+  }
+  #iFrame {
+    width: 90%;
+    margin: 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo h2 {
+    font-size: 0.8em;
+    padding-top: 15%;
+  }
+  #search-keyword {
+    padding: 0 2em;
+    flex-grow: 0;
+    width: 60%;
+  }
+  #submit-btn {
+    padding: 0.1em 1.5em;
+    font-size: 0.6em;
+  }
+  #iFrame {
+    height: 50vh;
+  }
+}
